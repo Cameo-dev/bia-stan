@@ -1,0 +1,13 @@
+// genere un radius de cette maniere radius-(angle)
+@each $i in $radius-number {
+  .radius-#{$i} {
+    @if ($i != 100)
+    {
+      border-radius: ($i * 1px);
+    }
+    @if ($i == 100)
+    {
+      border-radius: 100%;
+    }
+  }
+}

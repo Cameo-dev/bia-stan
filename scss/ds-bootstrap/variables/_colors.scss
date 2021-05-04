@@ -1,0 +1,79 @@
+//
+// Colors
+// --------------------------------------------------
+
+//variables
+
+//couleurs primaires
+$corail_mh_brand: #ff4b33;
+$corail_mh_dark: #db3924;
+
+//couleurs secondaires
+$gris_sable_light: #ede8e6;
+$gris_sable_dark: #e4d8c4;
+$violet_light: #6d4ca7;
+$violet_dark: #4b218e;
+$rose_light: #f4b5d4;
+$rose_dark: #d81e88;
+$jaune_light: #f4ec5b;
+$jaune_dark: #f9bd00;
+$bleu_turquoise_light: #5ad5d9;
+$bleu_turquoise_dark: #006374;
+$bleu_light: #4283d1;
+$bleu_dark: #1a283e;
+$rose_chair_light: #f0b7a5;
+$rose_chair_dark: #cca196;
+
+//couleurs interfaces
+$vert_positif: #1E7000;
+$rouge_negatif: #CC0000;
+$bleu_texte: #2964AE;
+$alerte_vert_positif: #bddab2;
+$alerte_rouge_negatif: #f9b2b2;
+$alerte_bleu_information: #c1d5ee; 
+$alerte_jaune_attention: #f9f5ad;
+
+
+//couleurs neutres
+$blanc: #ffffff;
+$noir: #222222;
+$gris_light: #e1e1e1;
+$gris_dark: #636363;
+$gris_background: #f6f6f6;
+
+$bleu_dark: #1A283E;
+
+// tableau des couleurs
+$couleurs: (
+  "corail_mh_brand": $corail_mh_brand,
+  "corail_mh_dark": $corail_mh_dark,
+
+  "gris_sable_light": $gris_sable_light,
+  "gris_sable_dark": $gris_sable_dark,
+  "violet_light": $violet_light,
+  "violet_dark": $violet_dark,
+  "rose_light": $rose_light,
+  "rose_dark": $rose_dark,
+  "jaune_light": $jaune_light,
+  "jaune_dark": $jaune_dark,
+  "bleu_turquoise_light": $bleu_turquoise_light,
+  "bleu_turquoise_dark": $bleu_turquoise_dark,
+  "bleu_light": $bleu_light,
+  "bleu_dark": $bleu_dark,
+  "rose_chair_light": $rose_chair_light,
+  "rose_chair_dark": $rose_chair_dark,
+
+  "vert_positif": $vert_positif,
+  "rouge_negatif": $rouge_negatif,
+  "bleu_texte": $bleu_texte,
+  "alerte_vert_positif": $alerte_vert_positif,
+  "alerte_rouge_negatif": $alerte_rouge_negatif,
+  "alerte_bleu_information": $alerte_bleu_information,
+  "alerte_jaune_attention": $alerte_jaune_attention,
+
+  "blanc": $blanc,
+  "noir": $noir,
+  "gris_light": $gris_light,
+  "gris_dark": $gris_dark,
+  "gris_background": $gris_background
+);

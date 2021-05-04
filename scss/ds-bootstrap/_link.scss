@@ -1,0 +1,48 @@
+a {
+  text-decoration: underline;
+  cursor: pointer;
+  
+  &:not(.corail_mh_brand):hover,
+  &:not(.corail_mh_brand):active,
+  &:not(.corail_mh_brand).active-link {
+    color: $corail_mh_brand !important;
+  }
+  &.corail_mh_brand:hover,
+  &.corail_mh_brand:active,
+  &.corail_mh_brand.active-link {
+    color: $corail_mh_dark !important;
+  }
+  &.chevron {
+    @include style-text($font-size-standard, $line-height-standard);
+    text-decoration: none !important;
+    color: $noir;
+    &::after {
+      margin-left: 8px;
+      vertical-align: middle;
+      font-family: "ds-icon", Arial, Helvetica, sans-serif;
+      text-transform: none;
+      line-height: 1;
+      -webkit-font-smoothing: antialiased;
+      content: map-get($icons, "dsicon-chevron-droit");
+    }
+  }
+  &.tabs {
+    @include style-text($font-size-standard, $line-height-standard);
+    text-align: center;
+    text-decoration: none !important;
+    color: $gris_dark;
+    padding: 0px 32px;
+    border-bottom: 2px solid $gris_light;
+    &:hover,
+    &:active,
+    &.active-link {
+      color: $corail_mh_brand !important;
+      border-color: $corail_mh_brand !important;
+    }
+  }
+}
+li {
+  & > a {
+    text-decoration: unset;
+  }
+}

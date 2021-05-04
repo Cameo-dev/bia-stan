@@ -1,0 +1,61 @@
+// Button background
+@mixin button-bg($bg_dark, $color, $color_bg, $font-size, $size) {
+    background: $color_bg;
+    color:  $color;
+    text-align: center;
+    font-size: $font-size;
+    border-radius: #{$size}px;
+    height: #{$size}px;
+    border: none;
+
+    &:not(:disabled):not(.disabled):hover {
+      background: $bg_dark;
+      transition: all 0.3s ease;
+      outline: none !important;
+    }
+}
+@mixin button-bg-secondaire($bg_dark, $color, $font-size, $size) {
+    background-color: transparent;
+    color:  $color;
+    text-align: center;
+    font-size: $font-size;
+    border-radius: #{$size}px;
+    @if $color == #222222 {
+        border-color: $gris_dark;
+    } @else {
+        border-color: $color;
+    }
+    border: 1px solid;
+    height: #{$size}px;
+    &:not(:disabled):not(.disabled):hover {
+      background:rgba(red($bg_dark), green($bg_dark), blue($bg_dark), 0.3);
+      transition: all 0.3s ease;
+      outline: none !important;
+    }
+}
+
+@mixin disabled-button() {
+    &.disabled,
+    &:disabled {
+        opacity: $btn-disabled-opacity;
+        cursor: default;
+    }
+}
+
+@mixin button-padding($hight, $font) {
+    padding: 8px 24px;
+}
+
+@mixin disabled-outline() {
+    &:focus {
+        outline: none;
+    }
+}
+
+@mixin button-icone-position() {
+    display: inline-block;
+    & > i {
+        margin-right: 0.5rem;
+        vertical-align: middle;
+    }
+}

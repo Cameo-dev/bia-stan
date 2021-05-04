@@ -1,0 +1,35 @@
+{% for input in inputs %}
+	{% if input.type == "select" %}
+		<div class="mh-button-toggle-group d-flex" id="{{ input.id }}">
+			{% for choice in input.choices %}
+				<button>{{ choice }}</button>
+			{% endfor %}
+		</div>
+	{% elif input.type == "radio" %}
+		<h5 class="mt-3">{{ input.label }}</h5>
+		{% for choice in input.choices %}
+			<div class="mh-radio d-block">
+			<input type="radio" id="{{ input.id }}{{ loop.index }}" name="{{ input.id }}"{% if loop.first %} checked{% endif %}>
+				<label for="{{ input.id }}{{ loop.index }}">{{ choice }}</label>
+			</div>
+		{% endfor %}
+		{% if input.helpMsg %}
+			<p class="gris_dark message">{{ input.helpMsg }}</p>
+		{% endif %}
+	{% elif input.type == "checkbox" %}
+		<div class="mh-checkbox">
+			<input type="checkbox" id="{{ input.id }}" name="{{ input.id }}">
+			<label for="{{ input.id }}">{{ input.label }}</label>
+		</div>
+	{% else %}
+		<div class="form-group">
+			<input id="{{ input.id }}" type="{{ input.type }}" class=""{% if input.pattern %} pattern="{{ input.pattern }}"{% endif %}{% if input.value %} value="{{ input.value }}"{% endif %}{{ " required" if input.required != false }}/>
+			<label for="{{ input.id }}" class="control-label">{{ input.label }}</label>
+			<i class="bar"></i>
+			<i class="dsicon-check"></i>
+			<i class="dsicon-close"></i>
+			<label for="{{ input.id }}" class="message-erreur">{{ input.errorMsg }}</label>
+			<label for="{{ input.id }}" class="message-aide">{{ input.helpMsg }}</label>
+		</div>
+	{% endif %}
+{% endfor %}

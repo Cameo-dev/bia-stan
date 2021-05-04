@@ -1,0 +1,35 @@
+---
+date: Last Modified
+---
+<!doctype html>
+<html lang="fr">
+	<head>
+		<title>{{ title or metadata.title }}</title>
+		<meta name="description" content="{{ description or metadata.description }}">
+		{% metagen
+		title=title or metadata.title,
+		desc=description or metadata.description,
+		url=page.url | absolute,
+		img="/img/banner.png" | absolute,
+		img_alt="Bulletin individuel d'affiliation",
+		name="Cameo"
+		%}
+		<meta property="og:locale" content="fr_FR">
+
+		<link rel="preload" as="font" href="{{ '/assets/fonts/Poppins/Poppins-Regular.ttf' | url }}" type="font/ttf" crossorigin/>
+		<link rel="preload" as="font" href="{{ '/assets/fonts/Poppins/Poppins-Bold.ttf' | url }}" type="font/ttf" crossorigin/>
+		<link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="{{ '/css/style.css' | url }}"/>
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg"/>
+	</head>
+	<body>
+		<header class="w-100 p-3{% if headerClass %} {{ headerClass }}{% endif %}">
+				<div class="mhlogo-logo-nom-couleur" aria-label="Malakoff Humanis"></div>
+		</header>
+
+		<main{% if contentClass %} class="{{ contentClass }}"{% endif %}>
+			{{ content | safe }}
+		</main>
+
+		<script src="{{ '/js/index.js' | url }}" async></script>
+	</body>
+</html>

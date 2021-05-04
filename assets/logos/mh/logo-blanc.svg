@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="64px" height="56px" viewBox="0 0 64 56" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 55.2 (78181) - https://sketchapp.com -->
+    <title>🧬 Logos/MH/Gimmick@3x</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M30.2495512,40.062438 C42.5129888,40.3028215 53.9613038,36.3301667 63.4301,27.8656826 C59.5944152,44.7508214 44.7862047,53.2478385 30.7836282,52.9735663 C17.4461627,52.7123977 4.95318952,43.9103826 0.0001,28.7662173 C8.67365468,36.2763967 19.0375494,39.8428394 30.2495512,40.062438 Z M30.2495512,19.8867553 C42.5129888,20.1271389 53.9613038,16.154484 63.4301,7.69 C59.5944152,24.5751387 44.7862047,33.0726078 30.7836282,32.7978837 C17.4461627,32.5367151 4.95318952,23.7346999 0.0001,8.59053471 C8.67365468,16.100714 19.0375494,19.6671568 30.2495512,19.8867553 Z" id="path-1"></path>
+    </defs>
+    <g id="🧬-Logos/MH/Gimmick" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <mask id="mask-2" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+        <use id="Mask" fill="#FFFFFF" xlink:href="#path-1"></use>
+    </g>
+</svg>

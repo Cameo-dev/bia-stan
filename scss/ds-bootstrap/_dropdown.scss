@@ -1,0 +1,95 @@
+.form-group {
+  select {
+    width: 100%;
+    font-size: 1rem;
+    height: 55px;
+    border: none;
+    line-height: 1.6;
+    box-shadow: none;
+    position: relative;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    padding: 8px 12px;
+    background: $gris_background;
+    ~ .message-aide-select {
+      color: $gris_dark;
+      font-size: 0.75rem;
+      margin-left: 8px;
+      margin-top: 4px;
+      position: absolute;
+      visibility: visible;
+    }
+    ~ .message-erreur-select {
+      position: absolute;
+      visibility: hidden;
+    }
+    &.erreur {
+      ~ .bar {
+        position: relative;
+        border-bottom: 2px solid #eb0000;
+        display: block;
+      }
+      ~ .message-erreur-select {
+        color: $rouge_negatif;
+        font-size: 0.75rem;
+        margin-left: 8px;
+        margin-top: 4px;
+        position: absolute;
+        visibility: visible;
+      }
+      ~ .message-aide-select {
+        visibility: hidden;
+      }
+    }
+    &.valide {
+      ~ .bar {
+        position: relative;
+        border-bottom: 2px solid #238500;
+        display: block;
+      }
+      ~ .message-erreur-select {
+        visibility: hidden;
+      }
+      ~ .message-aide-select {
+        visibility: hidden;
+      }
+    }
+    &:focus {
+      ~ i.dsicon-chevron-bas {
+        display: none;
+      }
+      ~ i.dsicon-chevron-haut {
+        display: inline;
+      }
+      outline: none;
+      ~ .bar::before {
+        width: 100%;
+        left: 0;
+      }
+    }
+  }
+
+  i.dsicon-chevron-bas,
+  i.dsicon-chevron-haut {
+    position: absolute;
+    top: 20px;
+    right: 15px;
+    bottom: 0;
+  }
+  i.dsicon-chevron-bas {
+    display: inline;
+  }
+  i.dsicon-chevron-haut {
+    display: none;
+  }
+}
+.dropdown-link {
+  border-bottom: 1px dashed $noir;
+  a {
+    text-decoration: none;
+  }
+  .dsicon-fleche-dropdown-texte {
+    margin-left: 10px;
+  }
+}

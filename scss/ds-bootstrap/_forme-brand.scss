@@ -1,0 +1,45 @@
+.forme-brand {
+  background-color: $bleu_turquoise_light;
+  position: relative;
+  padding: 15px 20px;
+  i.dsicon-smile-bulle-left,
+  i.dsicon-smile-bulle-right,
+  i.dsicon-smile-bulle-top,
+  i.dsicon-smile-bulle-bottom {
+    position: absolute;
+    display: none;
+    color: $bleu_turquoise_light;
+    font-size: 3.75rem;
+  }
+  &.bulle-haut {
+    margin-top: 60px;
+    i.dsicon-smile-bulle-top {
+      display: inline;
+      top: -60px;
+      right: 20px;
+    }
+  }
+  &.bulle-bas {
+    margin-bottom: 60px;
+    i.dsicon-smile-bulle-bottom {
+      display: inline;
+      right: 20px;
+    }
+  }
+  &.bulle-droite {
+    margin-right: 60px;
+    i.dsicon-smile-bulle-right {
+      display: inline;
+      bottom: 10px;
+      right: -66px;
+    }
+  }
+  &.bulle-gauche {
+    margin-left: 60px;
+    i.dsicon-smile-bulle-left {
+      display: inline;
+      bottom: 10px;
+      left: -66px;
+    }
+  }
+}

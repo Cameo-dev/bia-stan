@@ -1,0 +1,6 @@
+// genere class opacité de cette maniere opacite-(ratio)
+@for $i from 1 through 10 {
+  .opacite-#{$i} {
+    opacity: ($i * 0.1);
+  }
+}

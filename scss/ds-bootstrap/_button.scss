@@ -1,0 +1,53 @@
+@each $size, $font-size in $sizes-btn {
+  .btn-primaire-h#{$size} {
+    @include button-bg($corail_mh_dark, $blanc, $corail_mh_brand, $font-size, $size);
+    @include button-padding($size, $font-size);
+    @include disabled-button();
+    @include disabled-outline();
+    @include button-icone-position()
+  }
+}
+
+@each $size, $font-size in $sizes-btn {
+  .btn-primaire-inverse-h#{$size} {
+    @include button-bg($gris_light, $corail_mh_brand, $blanc, $font-size, $size);
+    @include button-padding($size, $font-size);
+    @include disabled-button();
+    @include disabled-outline();
+    @include button-icone-position()
+  }
+}
+
+@each $size, $font-size in $sizes-btn {
+  .btn-secondaire-h#{$size} {
+    @include button-bg-secondaire($gris_light, $corail_mh_brand, $font-size, $size);
+    @include button-padding($size, $font-size);
+    @include disabled-button();
+    @include disabled-outline();
+    @include button-icone-position()
+  }
+}
+
+@each $name, $couleur in $couleurs {
+  @each $size, $font-size in $sizes-btn {
+    .btn-secondaire-#{$name}-h#{$size} {
+      @include button-bg-secondaire($gris_light, $couleur, $font-size, $size);
+      @include button-padding($size, $font-size);
+      @include disabled-button();
+      @include disabled-outline();
+      @include button-icone-position()
+    }
+  }
+}
+
+@each $name, $couleur in $couleurs {
+  @each $size, $font-size in $sizes-btn {
+    .btn-secondaire-#{$name}-h#{$size} {
+      @include button-bg-secondaire($gris_light, $couleur, $font-size, $size);
+      @include button-padding($size, $font-size);
+      @include disabled-button();
+      @include disabled-outline();      
+      @include button-icone-position()
+    }
+  }
+}

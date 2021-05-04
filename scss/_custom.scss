@@ -1,0 +1,26 @@
+fieldset {
+	border: 1px solid $corail_mh_brand;
+	padding: 0 1.3rem 1rem 1.3rem;
+	margin-bottom: 2rem;
+
+	legend {
+		margin-left: .8rem;
+		float: none;
+		width: min-content;
+		padding: 0 1rem;
+	}
+}
+
+input[type="date"] {
+	color: transparent;
+}
+
+.mh-checkbox input[type="checkbox"] {
+	& + label::before {
+		top: calc(80% - 16px);
+	}
+
+	& + label::after {
+		top: calc(80% - 14px);
+	}
+}

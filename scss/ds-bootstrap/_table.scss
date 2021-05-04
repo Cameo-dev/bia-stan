@@ -1,0 +1,105 @@
+.ds-table {
+    $table: &;
+    width: 100%;
+    @include style-text($font-size-sub, $line-height-titre-petit);
+    // Todo : reprendre la définition de polices de typography.scss par défaut pour les tables et la mixin RWD.
+
+    // S'applique à toutes les lignes
+    tr {
+        transition: background-color 0.2s;
+        
+        td,
+        th {
+            padding: 0.25rem 0.75rem;
+            height: 4.5rem;
+            vertical-align: middle;
+
+            &:first-child {
+                padding-left: 1.5rem;
+            }
+    
+            &:last-child {
+                padding-right: 1.5rem;
+            }
+        }
+    }
+
+    // Libelé de colonne au format responsive, caché en desktop
+    &__mobile-label {
+        display: none;
+    }
+
+    // Spécifique à une ligne d'entête
+    thead,
+    tfoot {
+        tr {
+            border-top: 1px solid $corail_mh_brand;
+            border-bottom: 1px solid $corail_mh_brand;
+            color: $corail_mh_brand;
+    
+            td,
+            th {
+                padding: 0.5rem 0.75rem;
+                height: 3rem;
+            }
+        }
+    }
+
+    // Classes fonctionnelles sur l'ensemble du tableau
+    &--mobile-layout { // Layout responsive
+        @media (max-width: 1024px) {
+            thead,
+            tfoot {
+                display: none;
+            }
+            
+            tr {
+                td,
+                th {
+                    display: flex;
+                    height: auto;
+                    padding: 0.5rem;
+
+                    &:first-child {
+                        padding-left: 0.5rem;
+                        padding-top: 1rem;
+                    }
+            
+                    &:last-child {
+                        padding-right: 0.5rem;
+                        padding-bottom: 1rem;
+                    }
+                }
+            }
+            
+            #{$table}__mobile-label {
+                display: block;
+                flex: 0 0 115px;
+                margin-right: 1rem;
+                text-align: right;
+                color: $gris_dark;
+            }
+        }
+    }
+
+    &--alternate-bg { // Fond grisé alterné
+        tbody {
+            tr:nth-child(odd) {
+                background: $gris_background;
+            }
+        }
+    }
+    
+    // Classes fonctionnelles sur une seule ligne
+    &__row-selected { // Mise en avant d'une ligne sélectionnée
+        background: rgba($bleu_texte, 0.2);
+        border-top: 1px solid $bleu_texte;
+        border-bottom: 1px solid $bleu_texte;
+    }
+
+    &__row-hoverable { // Ligne peut avoir un effet hover
+        &:hover {
+            background: rgba($bleu_texte, 0.2) !important; // Surcharge les fonds alternés
+        }
+    }
+}

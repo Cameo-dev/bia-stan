@@ -1,0 +1,69 @@
+.ds-loader {
+    position: relative;
+    display: inline-block;
+    height: 1em;
+    width: 1em;
+    color: $corail_mh_brand;
+    animation: loader-icon-spin $loader_anim_duration $loader_anim_duration infinite;
+
+    &:before {
+        position: absolute;
+        bottom: -0.5em;
+        animation: loader-icon-color ($loader_anim_duration * length($loader_colors)) ($loader_anim_duration / length($loader_colors)) infinite backwards;
+    }
+}
+
+@keyframes loader-icon-spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    33%, 100% {
+        transform: rotate(-360deg);
+    }
+}
+
+/* 
+    Animation de changement de couleur de la forme Smile.
+
+    step : 100% divisé par le nombre de couleurs dans la liste donc chaque couleur reste affichée pendant la durée de l'animation / le nombre total de couleurs
+
+    Pour chaque itération :
+        index: l'index de la couleur en cours, démarre à 1
+        color: la couleur correspondant à l'index
+
+        {step * (index - 1)} = la position en %age dans l'animation de l'étape en cours
+        {step * (index - 0.2)} = 20% avant la position de la prochaine étape
+        Ces 2 chiffres permettent de bloquer la couleur entre ces deux valeurs
+
+        Exemple, step 1 :
+            0%, 13.33333% {
+                color: #ff4b33;
+            }
+            La couleur est définie de 0% (step * 0) jusqu'à 13.333% (step * 0.8)
+        
+        Exemple, step 2 & 3 :
+            16.66667%, 30% {
+                color: #f9bd00;
+            }
+            33.33333%, 46.66667% {
+                color: #ff4b33;
+            }
+            La couleur est en jaune à partir de 16.66% (step * 1) jusqu'à 30% (step * 1.8)
+            De 30% (step * 1.8) à 33.333% (step * 2) la couleur s'anime pour devenir corail
+            Elle devient et reste corail de 33.3% (step * 2) à 46.66% (step * 2.8)
+
+*/
+
+@keyframes loader-icon-color {
+    $step: 100% / length($loader_colors);
+
+    @for $index from 1 through length($loader_colors) {
+        $color: nth($loader_colors, $index);
+
+        #{$step * ($index - 1)}, #{$step * ($index - 0.2)} {
+            color: $color;
+        }
+    }
+}
+    

@@ -1,0 +1,66 @@
+// logo mh
+.mhlogo-logo-blanc {
+  @include logo-config($logo_blanc, 64px, 64px);
+}
+.mhlogo-valeur-blanc {
+  @include logo-config($valeur_blanc, 70px, 56px);
+}
+.mhlogo-logo-nom-blanc {
+  @include logo-config($logo_nom_blanc, 212px, 56px);
+}
+.mhlogo-logo-nom-valeur-blanc {
+  @include logo-config($logo_nom_valeur_blanc, 294px, 56px);
+}
+.mhlogo-logo-couleur {
+  @include logo-config($logo_couleur, 64px, 64px);
+}
+.mhlogo-valeur-couleur {
+  @include logo-config($valeur_couleur, 70px, 56px);
+}
+.mhlogo-logo-nom-couleur {
+  @include logo-config($logo_nom_couleur, 212px, 56px);
+}
+.mhlogo-logo-nom-valeur-couleur {
+  @include logo-config($logo_nom_valeur_couleur, 294px, 56px);
+}
+
+//product
+.mhlogo-produit-fondation-handicap-blanc {
+  @include logo-config($logo-produit-fondation-handicap-blanc, 156px, 56px);
+}
+.mhlogo-produit-fondation-handicap-1ligne-blanc {
+  @include logo-config($logo-produit-fondation-handicap-1ligne-blanc, 261px, 40px);
+}
+.mhlogo-produit-mh-innov-blanc {
+  @include logo-config($logo-produit-mh-innov-blanc, 128px, 56px);
+}
+.mhlogo-produit-mh-innov-1ligne-blanc {
+  @include logo-config($logo-produit-mh-innov-1ligne-blanc, 266px, 24px);
+}
+
+.mhlogo-produit-fondation-handicap-couleur {
+  @include logo-config($logo-produit-fondation-handicap-couleur, 156px, 56px);
+}
+.mhlogo-produit-fondation-handicap-1ligne-couleur {
+  @include logo-config($logo-produit-fondation-handicap-1ligne-couleur, 261px, 40px);
+}
+.mhlogo-produit-mh-innov-couleur {
+  @include logo-config($logo-produit-mh-innov-couleur, 128px, 56px);
+}
+.mhlogo-produit-mh-innov-1ligne-couleur {
+  @include logo-config($logo-produit-mh-innov-1ligne-couleur, 266px, 24px);
+}
+
+
+.mhlogo-produit-le-comptoir-couleur {
+  @include logo-config($logo-produit-le-comptoir-couleur, 234px, 56px);
+}
+.mhlogo-produit-le-comptoir-blanc {
+  @include logo-config($logo-produit-le-comptoir-blanc, 234px, 56px);
+}
+.mhlogo-produit-diagnostic-capital-humain {
+  @include logo-config($logo-produit-diagnostic-capital-humain, 171px, 56px);
+}
+.mhlogo-produit-solutions-pme {
+  @include logo-config($logo-produit-solutions-pme, 171px, 56px);
+}
