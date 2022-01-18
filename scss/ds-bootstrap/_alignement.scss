@@ -1,5 +1,0 @@
-@each $name, $alignement in $align {
-  .align-#{$name} {
-      text-align: $alignement;
-  }
-}

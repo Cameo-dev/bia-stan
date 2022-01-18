@@ -2,13 +2,15 @@
 layout: layouts/base.njk
 ---
 <h1 class="text-center my-3">{{ title or metadata.title }}</h1>
-<form class="d-flex flex-column align-items-center" action="/finish" method="GET">
+<form class="" action="/finish" method="GET">
 	{% for set in fieldsets %}
-		<fieldset id="{{ set.legend | slug }}-fieldset"{% if set.classes %} class="{{ set.classes }}"{% endif %}>
-			<legend>{{ set.legend }}</legend>
-			{% set inputs = set.inputs %}
-			{% include 'form.njk' %}
+		<fieldset id="{{ set.legend | slug }}-fieldset" class="card mb-3 {{ set.classes if set.classes }}">
+			<legend class="card-header bg-primary text-white">{{ set.legend }}</legend>
+			<div class="card-body">
+				{% set inputs = set.inputs %}
+				{% include 'form.njk' %}
+			</div>
 		</fieldset>
 	{% endfor %}
-	<input type="submit" class="btn-primaire-h56" value="Valider">
+	<input type="submit" class="btn btn-primary" value="Valider">
 </form>

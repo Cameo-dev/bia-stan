@@ -1,26 +1,16 @@
-fieldset {
-	border: 1px solid $corail_mh_brand;
-	padding: 0 1.3rem 1rem 1.3rem;
-	margin-bottom: 2rem;
+body {
+	background-color: #eaf5fb;
+}
 
-	legend {
-		margin-left: .8rem;
-		float: none;
-		width: min-content;
-		padding: 0 1rem;
+.table {
+	--bs-table-active-color: white;
+	--bs-table-active-bg: #{$primary};
+
+	td:first-child {
+		font-weight: bold;
 	}
 }
 
-input[type="date"] {
-	color: transparent;
-}
-
-.mh-checkbox input[type="checkbox"] {
-	& + label::before {
-		top: calc(80% - 16px);
-	}
-
-	& + label::after {
-		top: calc(80% - 14px);
-	}
+.card-text {
+	margin: 1rem 0;
 }

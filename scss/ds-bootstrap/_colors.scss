@@ -1,8 +1,0 @@
-@each $name, $couleur in $couleurs {
-  .#{$name} {
-    color: $couleur !important;
-  }
-  .#{$name}_bg {
-    background-color: $couleur !important;
-  }
-}

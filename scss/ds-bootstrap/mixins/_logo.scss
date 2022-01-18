@@ -1,7 +1,0 @@
-@mixin logo-config($variable, $width, $height) {
-    background-image: url($variable);
-    background-repeat: no-repeat;
-    background-size: contain;
-    width: $width;
-    height: $height;
-}

@@ -16,20 +16,17 @@ date: Last Modified
 		%}
 		<meta property="og:locale" content="fr_FR">
 
-		<link rel="preload" as="font" href="{{ '/assets/fonts/Poppins/Poppins-Regular.ttf' | url }}" type="font/ttf" crossorigin/>
-		<link rel="preload" as="font" href="{{ '/assets/fonts/Poppins/Poppins-Bold.ttf' | url }}" type="font/ttf" crossorigin/>
 		<link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="{{ '/css/style.css' | url }}"/>
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg"/>
 	</head>
 	<body>
 		<header class="w-100 p-3{% if headerClass %} {{ headerClass }}{% endif %}">
-				<div class="mhlogo-logo-nom-couleur" aria-label="Malakoff Humanis"></div>
 		</header>
 
-		<main{% if contentClass %} class="{{ contentClass }}"{% endif %}>
+		<main class="container{{ contentClass if contentClass }}">
 			{{ content | safe }}
 		</main>
-
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
 		<script src="{{ '/js/index.js' | url }}" async></script>
 	</body>
 </html>

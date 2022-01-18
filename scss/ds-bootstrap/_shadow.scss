@@ -1,8 +1,0 @@
-// genere une class box-shadow de cette maniere shadow-(taille-droite)-(taille-bas)
-@for $right from 0 through 6 {
-  @for $bottom from 0 through 16 {
-    .shadow-#{$right}-#{$bottom} {
-      box-shadow: 0 ($right * 1px) ($bottom * 1px) 0 rgba(34, 34, 34, 0.3);
-    }
-  }
-}

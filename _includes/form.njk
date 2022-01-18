@@ -1,35 +1,102 @@
 {% for input in inputs %}
 	{% if input.type == "select" %}
-		<div class="mh-button-toggle-group d-flex" id="{{ input.id }}">
+		<div class="mb-3" id="{{ input.id }}">
+			<h5 class="">{{ input.title }}</h5>
 			{% for choice in input.choices %}
-				<button>{{ choice }}</button>
+				<input type="radio" class="btn-check" autocomplete="off" id="{{ input.id }}{{ loop.index }}" name="{{ input.id }}"{% if loop.first %} checked{% endif %}>
+				<label class="btn btn-outline-primary" for="{{ input.id }}{{ loop.index }}">{{ choice }}</label>
 			{% endfor %}
 		</div>
 	{% elif input.type == "radio" %}
 		<h5 class="mt-3">{{ input.label }}</h5>
 		{% for choice in input.choices %}
-			<div class="mh-radio d-block">
+			<div class="d-block">
 			<input type="radio" id="{{ input.id }}{{ loop.index }}" name="{{ input.id }}"{% if loop.first %} checked{% endif %}>
-				<label for="{{ input.id }}{{ loop.index }}">{{ choice }}</label>
+			<label for="{{ input.id }}{{ loop.index }}">{{ choice }}</label>
 			</div>
 		{% endfor %}
 		{% if input.helpMsg %}
 			<p class="gris_dark message">{{ input.helpMsg }}</p>
 		{% endif %}
 	{% elif input.type == "checkbox" %}
-		<div class="mh-checkbox">
-			<input type="checkbox" id="{{ input.id }}" name="{{ input.id }}">
+		<div class="form-check">
+			<input type="checkbox" class="form-check-input" id="{{ input.id }}" name="{{ input.id }}">
 			<label for="{{ input.id }}">{{ input.label }}</label>
 		</div>
+	{% elif input.type == "table" %}
+		<div class="mb-3 table-responsive">
+			<table class="table table-borderless align-middle">
+				<thead>
+						<tr>
+					{% for head in input.heads %}
+						<th>{{ head }}</th>
+						{% endfor %}
+				</thead>
+				<tbody>
+					{% for row in input.rows %}
+						<tr>
+							{% for item in row %}
+								<td>{{ item }}</td>
+								{% endfor %}
+						</tr>
+						{% endfor %}
+				</tbody>
+			</table>
+			</div>
+		{#<div class="mb-3 d-flex">#}
+			{#{% for column in input.columns %}#}
+				{#<div class="d-flex flex-column">#}
+					{#{% for item in column %}#}
+						{#<p>{{ item }}</p>#}
+					{#{% endfor %}#}
+				{#</div>#}
+			{#{% endfor %}#}
+		{#</div>#}
+	{% elif input.type == "tabs" %}
+		<ul class="nav nav-pills card-header-tabs" role="tablist">
+			{% for tab in input.tabs %}
+				<li class="nav-item" role="presentation">
+					<button id="{{ tab.title | slug }}-tab" data-bs-toggle="pill" data-bs-target="#{{ tab.title | slug }}" class="nav-link{{ ' active' if loop.first }}" aria-selected={{ 'true' if loop.first else 'false' }} type="button" role="tab" aria-controls="{{ tab.title | slug }}">{{ tab.title }}</button>
+				</li>
+			{% endfor %}
+		</ul>
+		<div class="tab-content">
+			{% for tab in input.tabs %}
+				<div class="tab-pane mt-4{{ ' active' if loop.first }}" id="{{ tab.title | slug }}" role="tabpanel" aria-labelledby="{{ tab.title | slug }}-tab">
+					<table class="table table-borderless">
+						<tbody>
+							{% for row in tab.content %}
+								<tr>
+									<th scope="row">{{ row[0] }}</th>
+									<td>{{ row[1] }}</td>
+								</tr>
+							{% endfor %}
+						</tbody>
+					</table>
+					{% if tab.helpMsg %}<p class="text-success">{{ tab.helpMsg }}</p>{% endif %}
+					{% if tab.errorMsg %}<p class="text-warning">{{ tab.errorMsg }}</p>{% endif %}
+				</div>
+			{% endfor %}
+		</div>
+	{% elif input.type == 'modal' %}
+		<div class="d-flex justify-content-center">
+			<button type="button" class="btn {{ input.btnClasses }}" data-bs-toggle="modal" data-bs-target="#{{ input.id }}">{{ input.btnContent }}</button>
+		</div>
+		<div class="modal fade" id="{{ input.id }}" tabindex="-1" aria-hidden="true">
+			<div class="modal-dialog modal-dialog-centered">
+				<div class="modal-content">
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fermer"></button>
+					<img src="{{ input.modalContent}}">
+				</div>
+			</div>
+		</div>
 	{% else %}
-		<div class="form-group">
-			<input id="{{ input.id }}" type="{{ input.type }}" class=""{% if input.pattern %} pattern="{{ input.pattern }}"{% endif %}{% if input.value %} value="{{ input.value }}"{% endif %}{{ " required" if input.required != false }}/>
-			<label for="{{ input.id }}" class="control-label">{{ input.label }}</label>
-			<i class="bar"></i>
-			<i class="dsicon-check"></i>
-			<i class="dsicon-close"></i>
-			<label for="{{ input.id }}" class="message-erreur">{{ input.errorMsg }}</label>
-			<label for="{{ input.id }}" class="message-aide">{{ input.helpMsg }}</label>
+		<div class="card-text">
+			{#<div class="mb-3">#}
+			<label for="{{ input.id }}" class="form-label">{{ input.label }}</label>
+			<input id="{{ input.id }}" type="{{ input.type }}" class="form-control"{% if input.pattern %} pattern="{{ input.pattern }}"{% endif %}{% if input.value %} value="{{ input.value }}"{% endif %}{{ " required" if input.required != false }}/>
+			<label for="{{ input.id }}" class="invalid-feedback">{{ input.errorMsg }}</label>
+			{% if input.helpMsg %}<label for="{{ input.id }}" class="form-text">{{ input.helpMsg }}</label>{% endif %}
 		</div>
 	{% endif %}
 {% endfor %}

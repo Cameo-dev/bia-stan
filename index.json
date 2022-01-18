@@ -11,6 +11,7 @@
 				"pattern": "[1-2]\\d{14}"
 			},{
 				"id": "civility",
+				"title": "Civilité",
 				"type": "select",
 				"choices": ["Monsieur", "Madame"]
 			},{
@@ -36,111 +37,93 @@
 				"id": "teletransmission",
 				"label": "Je souhaite activer la télétransmission NOEMIE",
 				"type": "checkbox"
-			}, {
-				"id": "options",
-				"label": "Garanties complémentaires",
-				"type": "radio",
-				"choices": ["Base" , "Base + Renforcement optique et dentaire"],
-				"helpMsg": "Cette option me coûtera 13,94€/mois et me sera prélevée sur mon salaire."
 			}]
 		},{
-			"legend": "Télétransmission",
-			"classes": "d-none",
-			"inputs": [{
+		"legend": "Télétransmission",
+		"classes": "d-none",
+		"inputs": [{
 				"id": "regime",
-				"label": "Régime",
-				"type": "text",
-				"errorMsg": "",
-				"required": false
-			},{
-				"id": "localregime",
-				"label": "Régime local",
-				"type": "text",
-				"errorMsg": "",
-				"required": false
-			},{
-				"id": "caisse",
-				"label": "Caisse",
-				"type": "text",
-				"errorMsg": "",
-				"required": false
-			},{
-				"id": "centre",
-				"label": "centre",
-				"type": "text",
-				"errorMsg": "",
-				"required": false
-			}]
-		}, {
-			"legend": "Informations conjoint",
-			"inputs": [{
-				"id": "socialsecurity-partner",
-				"label": "Numéro de Sécurité Sociale",
-				"type": "text",
-				"errorMsg": "Ce numéro n'est pas valide",
-				"helpMsg": "15 chiffres",
-				"pattern": "[1-2]\\d{14}"
-			},{
-				"id": "civility-partner",
+				"title": "Régime",
 				"type": "select",
-				"choices": ["Monsieur", "Madame"]
-			},{
-				"id": "firstname-partner",
-				"label": "Prénom",
-				"type": "text",
-				"errorMsg": "Ce prénom n'est pas valide",
-				"helpMsg": ""
-			}, {
-				"id": "lastname-partner",
-				"label": "Nom",
-				"type": "text",
-				"errorMsg": "Ce nom n'est pas valide",
-				"helpMsg": "Nom d'usage"
-			}, {
-				"id": "birthday-partner",
-				"label": "Date de naissance",
-				"type": "date",
-				"errorMsg": "Cette date n'est pas valide"
-			}, {
-				"id": "teletransmission-partner",
-				"label": "Je souhaite activer la télétransmission NOEMIE",
-				"type": "checkbox"
-			}]
+				"choices": ["Général", "Alsace/Moselle"]
+		},{
+			"id": "caisse",
+			"label": "Organisme de rattachement",
+			"type": "text",
+			"errorMsg": "",
+			"required": false
+		},{
+			"id": "code",
+			"label": "Code de gestion",
+			"type": "text",
+			"errorMsg": "",
+			"required": false
+		}]
 		}, {
-			"legend": "Informations descendant",
-			"inputs": [{
-				"id": "socialsecurity-child",
-				"label": "Numéro de Sécurité Sociale",
-				"type": "text",
-				"errorMsg": "Ce numéro n'est pas valide",
-				"helpMsg": "15 chiffres",
-				"pattern": "[1-2]\\d{14}"
-			},{
-				"id": "civility-child",
-				"type": "select",
-				"choices": ["Monsieur", "Madame"]
-			},{
-				"id": "firstname-child",
-				"label": "Prénom",
-				"type": "text",
-				"errorMsg": "Ce prénom n'est pas valide",
-				"helpMsg": ""
+		"legend": "Choix de garanties",
+		"inputs": [{
+			"id": "policy",
+			"type": "tabs",
+			"tabs": [{
+				"title": "Base",
+				"content": [
+					["Consultation généraliste", "300%, soit 75€"],
+					["Verres simple et monture", "300€, dont 100€ de monture"],
+					["Prothèses dentaires et couronnes remboursées", "320%"]
+				],
+				"helpMsg": "Rien à rajouter, tout est déjà pris en charge !"
 			}, {
-				"id": "lastname-child",
-				"label": "Nom",
-				"type": "text",
-				"errorMsg": "Ce nom n'est pas valide",
-				"helpMsg": "Nom d'usage"
-			}, {
-				"id": "birthday-child",
-				"label": "Date de naissance",
-				"type": "date",
-				"errorMsg": "Cette date n'est pas valide"
-			}, {
-				"id": "teletransmission-child",
-				"label": "Il dispose de son propre numéro de sécurité sociale",
-				"type": "checkbox"
-			}]
-		}
+				"title": "Surcomplémentaire",
+				"content": [
+					["🤒 Consultation généraliste", "400%, soit 100€"],
+					["😎 Verres simple et monture", "420€, dont 100€ de monture"],
+					["😁 Prothèses dentaires et couronnes remboursées", "500%"]
+				],
+				"errorMsg": "Je renforce mes garanties pour 25€ qui seront prélevés sur mon compte bancaire."
+			}
+			]
+		}, {
+			"id": "details",
+			"type": "modal",
+			"btnClasses": "btn-outline-secondary",
+			"btnContent": "Afficher toutes les garanties",
+			"modalContent": "/assets/garanties.png"
+		}]
+		}, {
+		"legend": "Informations conjoint",
+		"inputs": [{
+			"id": "socialsecurity-partner",
+			"label": "Numéro de Sécurité Sociale",
+			"type": "text",
+			"errorMsg": "Ce numéro n'est pas valide",
+			"helpMsg": "15 chiffres",
+			"pattern": "[1-2]\\d{14}"
+		},{
+			"id": "civility-partner",
+			"type": "select",
+			"choices": ["Monsieur", "Madame"]
+		},{
+			"id": "firstname-partner",
+			"label": "Prénom",
+			"type": "text",
+			"errorMsg": "Ce prénom n'est pas valide",
+			"helpMsg": ""
+		}, {
+			"id": "lastname-partner",
+			"label": "Nom",
+			"type": "text",
+			"errorMsg": "Ce nom n'est pas valide",
+			"helpMsg": "Nom d'usage"
+		}, {
+			"id": "birthday-partner",
+			"label": "Date de naissance",
+			"type": "date",
+			"errorMsg": "Cette date n'est pas valide"
+		}, {
+			"id": "teletransmission-partner",
+			"label": "Je souhaite activer la télétransmission NOEMIE",
+			"type": "checkbox"
+		}]
+		} 
 	]
 }
