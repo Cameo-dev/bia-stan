@@ -7,11 +7,10 @@
 				"label": "Numéro de Sécurité Sociale",
 				"type": "text",
 				"errorMsg": "Ce numéro n'est pas valide",
-				"helpMsg": "15 chiffres",
 				"pattern": "[1-2]\\d{14}"
 			},{
 				"id": "civility",
-				"title": "Civilité",
+				"label": "Civilité",
 				"type": "select",
 				"choices": ["Monsieur", "Madame"]
 			},{
@@ -26,13 +25,26 @@
 				"label": "Nom",
 				"type": "text",
 				"value": "Richardet",
-				"errorMsg": "Ce nom n'est pas valide",
-				"helpMsg": "Nom d'usage"
+				"errorMsg": "Ce nom n'est pas valide"
 			}, {
 				"id": "birthday",
 				"label": "Date de naissance",
 				"type": "date",
 				"errorMsg": "Cette date n'est pas valide"
+			}, {
+				"id": "address",
+				"label": "Adresse postale",
+				"type": "text",
+				"placeholder": "1-11 rue Brillat-Savarin, 75013 Paris"
+			}, {
+				"id": "cellphone",
+				"label": "Téléphone mobile",
+				"type": "tel"
+			}, {
+				"id": "email",
+				"label": "Adresse e-mail",
+				"type": "email",
+				"placeholder": "perso@protonmail.com"
 			}, {
 				"id": "teletransmission",
 				"label": "Je souhaite activer la télétransmission NOEMIE",
@@ -67,9 +79,9 @@
 			"tabs": [{
 				"title": "Base",
 				"content": [
-					["Consultation généraliste", "300%, soit 75€"],
-					["Verres simple et monture", "300€, dont 100€ de monture"],
-					["Prothèses dentaires et couronnes remboursées", "320%"]
+					["🤒 Consultation généraliste", "300%, soit 75€"],
+					["😎 Verres simple et monture", "300€, dont 100€ de monture"],
+					["😁 Prothèses dentaires et couronnes remboursées", "320%"]
 				],
 				"helpMsg": "Rien à rajouter, tout est déjà pris en charge !"
 			}, {
@@ -92,38 +104,37 @@
 		}, {
 		"legend": "Informations conjoint",
 		"inputs": [{
-			"id": "socialsecurity-partner",
-			"label": "Numéro de Sécurité Sociale",
-			"type": "text",
-			"errorMsg": "Ce numéro n'est pas valide",
-			"helpMsg": "15 chiffres",
-			"pattern": "[1-2]\\d{14}"
-		},{
-			"id": "civility-partner",
-			"type": "select",
-			"choices": ["Monsieur", "Madame"]
-		},{
-			"id": "firstname-partner",
-			"label": "Prénom",
-			"type": "text",
-			"errorMsg": "Ce prénom n'est pas valide",
-			"helpMsg": ""
-		}, {
-			"id": "lastname-partner",
-			"label": "Nom",
-			"type": "text",
-			"errorMsg": "Ce nom n'est pas valide",
-			"helpMsg": "Nom d'usage"
-		}, {
-			"id": "birthday-partner",
-			"label": "Date de naissance",
-			"type": "date",
-			"errorMsg": "Cette date n'est pas valide"
-		}, {
-			"id": "teletransmission-partner",
-			"label": "Je souhaite activer la télétransmission NOEMIE",
-			"type": "checkbox"
-		}]
+				"id": "socialsecurity-partner",
+				"label": "Numéro de Sécurité Sociale",
+				"type": "text",
+				"errorMsg": "Ce numéro n'est pas valide",
+				"pattern": "[1-2]\\d{14}"
+			},{
+				"id": "civility",
+				"title": "Civilité",
+				"type": "select",
+				"choices": ["Monsieur", "Madame"]
+			},{
+				"id": "firstname",
+				"label": "Prénom",
+				"type": "text",
+				"errorMsg": "Ce prénom n'est pas valide",
+				"helpMsg": ""
+			}, {
+				"id": "lastname",
+				"label": "Nom",
+				"type": "text",
+				"errorMsg": "Ce nom n'est pas valide"
+			}, {
+				"id": "birthday",
+				"label": "Date de naissance",
+				"type": "date",
+				"errorMsg": "Cette date n'est pas valide"
+			}, {
+				"id": "teletransmission",
+				"label": "Je souhaite activer la télétransmission NOEMIE",
+				"type": "checkbox"
+			}]
 		} 
 	]
 }

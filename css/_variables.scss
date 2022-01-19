@@ -1,0 +1,21 @@
+$primary: #f07d00;
+$secondary: #747272;
+
+$warning: $secondary;
+
+$border-radius: .5em;
+$border-color: $secondary;
+
+// Tables
+$table-cell-padding-x: 0;
+
+// Card
+$card-border-radius: $border-radius;
+$card-border-color: transparent;
+$card-spacer-x: 3rem;
+$card-spacer-y: 3rem;
+$card-title-spacer-y: $card-spacer-y; 
+
+// Forms
+$input-border-color: $primary;
+$form-check-input-border: 1px solid $primary;

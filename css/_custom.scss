@@ -1,0 +1,25 @@
+body {
+	background-color: rgba($secondary, 0.3);
+}
+
+.table {
+	--bs-table-active-color: white;
+	--bs-table-active-bg: $primary;
+
+	td:first-child {
+		font-weight: bold;
+	}
+}
+
+.card-text {
+	margin: 1rem 0;
+}
+
+.form-label.required {
+	&::after {
+		content: '*';
+		color: red;
+		font-size: .9rem;
+		padding-left: .2rem;
+	}
+}

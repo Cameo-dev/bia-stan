@@ -1,7 +1,7 @@
 {% for input in inputs %}
 	{% if input.type == "select" %}
 		<div class="mb-3" id="{{ input.id }}">
-			<h5 class="">{{ input.title }}</h5>
+			<p class="form-label">{{ input.label }}</p>
 			{% for choice in input.choices %}
 				<input type="radio" class="btn-check" autocomplete="off" id="{{ input.id }}{{ loop.index }}" name="{{ input.id }}"{% if loop.first %} checked{% endif %}>
 				<label class="btn btn-outline-primary" for="{{ input.id }}{{ loop.index }}">{{ choice }}</label>
@@ -15,9 +15,6 @@
 			<label for="{{ input.id }}{{ loop.index }}">{{ choice }}</label>
 			</div>
 		{% endfor %}
-		{% if input.helpMsg %}
-			<p class="gris_dark message">{{ input.helpMsg }}</p>
-		{% endif %}
 	{% elif input.type == "checkbox" %}
 		<div class="form-check">
 			<input type="checkbox" class="form-check-input" id="{{ input.id }}" name="{{ input.id }}">
@@ -53,7 +50,7 @@
 			{#{% endfor %}#}
 		{#</div>#}
 	{% elif input.type == "tabs" %}
-		<ul class="nav nav-pills card-header-tabs" role="tablist">
+		<ul class="nav nav-pills card-header-tabs card-text" role="tablist">
 			{% for tab in input.tabs %}
 				<li class="nav-item" role="presentation">
 					<button id="{{ tab.title | slug }}-tab" data-bs-toggle="pill" data-bs-target="#{{ tab.title | slug }}" class="nav-link{{ ' active' if loop.first }}" aria-selected={{ 'true' if loop.first else 'false' }} type="button" role="tab" aria-controls="{{ tab.title | slug }}">{{ tab.title }}</button>
@@ -92,9 +89,16 @@
 		</div>
 	{% else %}
 		<div class="card-text">
-			{#<div class="mb-3">#}
-			<label for="{{ input.id }}" class="form-label">{{ input.label }}</label>
-			<input id="{{ input.id }}" type="{{ input.type }}" class="form-control"{% if input.pattern %} pattern="{{ input.pattern }}"{% endif %}{% if input.value %} value="{{ input.value }}"{% endif %}{{ " required" if input.required != false }}/>
+			<label for="{{ input.id }}" class="form-label{{ " required" if input.required != false }}">{{ input.label }}</label>
+			<input
+				id="{{ input.id }}" 
+				type="{{ input.type }}" 
+				class="form-control"
+				pattern="{{ input.pattern if input.pattern }}" 
+				value="{{ input.value if input.value }}"
+				placeholder="{{ input.placeholder if input.placeholder }}"
+				{{ " required" if input.required != false }}
+			/>
 			<label for="{{ input.id }}" class="invalid-feedback">{{ input.errorMsg }}</label>
 			{% if input.helpMsg %}<label for="{{ input.id }}" class="form-text">{{ input.helpMsg }}</label>{% endif %}
 		</div>

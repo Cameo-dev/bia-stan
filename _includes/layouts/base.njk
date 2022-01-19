@@ -20,13 +20,18 @@ date: Last Modified
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg"/>
 	</head>
 	<body>
-		<header class="w-100 p-3{% if headerClass %} {{ headerClass }}{% endif %}">
-		</header>
+		<nav class="navbar navbar-light bg-light">
+			<div class="container-fluid">
+				<a class="navbar-brand" href="#">
+					<img src="assets/logo_vivinter.jpg" alt="" height="30" class="d-inline-block align-text-top">
+				</a>
+			</div>
+		</nav>
 
 		<main class="container{{ contentClass if contentClass }}">
 			{{ content | safe }}
 		</main>
-		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+		<script src="{{ '/js/bootstrap.min.js' | url }}" async></script>
 		<script src="{{ '/js/index.js' | url }}" async></script>
 	</body>
 </html>
