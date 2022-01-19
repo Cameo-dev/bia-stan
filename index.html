@@ -1,1 +1,440 @@
-<!doctype html><html lang="fr"><head><title>Bulletin Individuel d&#39;Affiliation</title><meta name="description" content="Bulletin à remplir pour finaliser votre affiliation"><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Bulletin Individuel d'Affiliation</title><meta name="author" content="Cameo"><meta name="description" content="Bulletin à remplir pour finaliser votre affiliation"><meta property="og:title" content="Bulletin Individuel d'Affiliation"><meta property="og:type" content="website"><meta property="og:description" content="Bulletin à remplir pour finaliser votre affiliation"><meta property="og:url" content="http://localhost:8080/BIA-MH/"><meta property="og:image" content="http://localhost:8080/BIA-MH/img/banner.png"><meta property="og:image:alt" content="Bulletin individuel d'affiliation"><meta name="twitter:card" content="summary"><meta name="twitter:title" content="Bulletin Individuel d'Affiliation"><meta name="twitter:description" content="Bulletin à remplir pour finaliser votre affiliation"><meta name="twitter:image" content="http://localhost:8080/BIA-MH/img/banner.png"><meta name="twitter:image:alt" content="Bulletin individuel d'affiliation"><link rel="canonical" href="http://localhost:8080/BIA-MH/"><meta property="og:locale" content="fr_FR"><link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="/BIA-MH/css/style.css"><link rel="icon" type="image/svg+xml" href="/favicon.svg"></head><body><header class="w-100 p-3"></header><main class="container"><h1 class="text-center my-3">Bulletin Individuel d&#39;Affiliation</h1><form class="" action="/finish" method="GET"><fieldset id="informations-personnelles-fieldset" class="card mb-3"><legend class="card-header bg-primary text-white">Informations personnelles</legend><div class="card-body"><div class="card-text"><label for="socialsecurity" class="form-label">Numéro de Sécurité Sociale</label> <input id="socialsecurity" type="text" class="form-control" pattern="[1-2]\d{14}" required> <label for="socialsecurity" class="invalid-feedback">Ce numéro n&#39;est pas valide</label> <label for="socialsecurity" class="form-text">15 chiffres</label></div><div class="mb-3" id="civility"><h5 class="">Civilité</h5><input type="radio" class="btn-check" autocomplete="off" id="civility1" name="civility" checked="checked"> <label class="btn btn-outline-primary" for="civility1">Monsieur</label> <input type="radio" class="btn-check" autocomplete="off" id="civility2" name="civility"> <label class="btn btn-outline-primary" for="civility2">Madame</label></div><div class="card-text"><label for="firstname" class="form-label">Prénom</label> <input id="firstname" type="text" class="form-control" value="Jean-Baptiste" required> <label for="firstname" class="invalid-feedback">Ce prénom n&#39;est pas valide</label></div><div class="card-text"><label for="lastname" class="form-label">Nom</label> <input id="lastname" type="text" class="form-control" value="Richardet" required> <label for="lastname" class="invalid-feedback">Ce nom n&#39;est pas valide</label> <label for="lastname" class="form-text">Nom d&#39;usage</label></div><div class="card-text"><label for="birthday" class="form-label">Date de naissance</label> <input id="birthday" type="date" class="form-control" required> <label for="birthday" class="invalid-feedback">Cette date n&#39;est pas valide</label></div><div class="form-check"><input type="checkbox" class="form-check-input" id="teletransmission" name="teletransmission"> <label for="teletransmission">Je souhaite activer la télétransmission NOEMIE</label></div></div></fieldset><fieldset id="teletransmission-fieldset" class="card mb-3 d-none"><legend class="card-header bg-primary text-white">Télétransmission</legend><div class="card-body"><div class="mb-3" id="regime"><h5 class="">Régime</h5><input type="radio" class="btn-check" autocomplete="off" id="regime1" name="regime" checked="checked"> <label class="btn btn-outline-primary" for="regime1">Général</label> <input type="radio" class="btn-check" autocomplete="off" id="regime2" name="regime"> <label class="btn btn-outline-primary" for="regime2">Alsace/Moselle</label></div><div class="card-text"><label for="caisse" class="form-label">Organisme de rattachement</label> <input id="caisse" type="text" class="form-control"> <label for="caisse" class="invalid-feedback"></label></div><div class="card-text"><label for="code" class="form-label">Code de gestion</label> <input id="code" type="text" class="form-control"> <label for="code" class="invalid-feedback"></label></div></div></fieldset><fieldset id="choix-de-garanties-fieldset" class="card mb-3"><legend class="card-header bg-primary text-white">Choix de garanties</legend><div class="card-body"><ul class="nav nav-pills card-header-tabs" role="tablist"><li class="nav-item" role="presentation"><button id="base-tab" data-bs-toggle="pill" data-bs-target="#base" class="nav-link active" aria-selected="true" type="button" role="tab" aria-controls="base">Base</button></li><li class="nav-item" role="presentation"><button id="surcomplementaire-tab" data-bs-toggle="pill" data-bs-target="#surcomplementaire" class="nav-link" aria-selected="false" type="button" role="tab" aria-controls="surcomplementaire">Surcomplémentaire</button></li></ul><div class="tab-content"><div class="tab-pane mt-4 active" id="base" role="tabpanel" aria-labelledby="base-tab"><table class="table table-borderless"><tbody><tr><th scope="row">Consultation généraliste</th><td>300%, soit 75€</td></tr><tr><th scope="row">Verres simple et monture</th><td>300€, dont 100€ de monture</td></tr><tr><th scope="row">Prothèses dentaires et couronnes remboursées</th><td>320%</td></tr></tbody></table><p class="text-success">Rien à rajouter, tout est déjà pris en charge !</p></div><div class="tab-pane mt-4" id="surcomplementaire" role="tabpanel" aria-labelledby="surcomplementaire-tab"><table class="table table-borderless"><tbody><tr><th scope="row">🤒 Consultation généraliste</th><td>400%, soit 100€</td></tr><tr><th scope="row">😎 Verres simple et monture</th><td>420€, dont 100€ de monture</td></tr><tr><th scope="row">😁 Prothèses dentaires et couronnes remboursées</th><td>500%</td></tr></tbody></table><p class="text-warning">Je renforce mes garanties pour 25€ qui seront prélevés sur mon compte bancaire.</p></div></div><div class="d-flex justify-content-center"><button type="button" class="btn btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#details">Afficher toutes les garanties</button></div><div class="modal fade" id="details" tabindex="-1" aria-hidden="true"><div class="modal-dialog modal-dialog-centered"><div class="modal-content"><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fermer"></button> <img src="/assets/garanties.png"></div></div></div></div></fieldset><fieldset id="informations-conjoint-fieldset" class="card mb-3"><legend class="card-header bg-primary text-white">Informations conjoint</legend><div class="card-body"><div class="card-text"><label for="socialsecurity-partner" class="form-label">Numéro de Sécurité Sociale</label> <input id="socialsecurity-partner" type="text" class="form-control" pattern="[1-2]\d{14}" required> <label for="socialsecurity-partner" class="invalid-feedback">Ce numéro n&#39;est pas valide</label> <label for="socialsecurity-partner" class="form-text">15 chiffres</label></div><div class="mb-3" id="civility-partner"><h5 class=""></h5><input type="radio" class="btn-check" autocomplete="off" id="civility-partner1" name="civility-partner" checked="checked"> <label class="btn btn-outline-primary" for="civility-partner1">Monsieur</label> <input type="radio" class="btn-check" autocomplete="off" id="civility-partner2" name="civility-partner"> <label class="btn btn-outline-primary" for="civility-partner2">Madame</label></div><div class="card-text"><label for="firstname-partner" class="form-label">Prénom</label> <input id="firstname-partner" type="text" class="form-control" required> <label for="firstname-partner" class="invalid-feedback">Ce prénom n&#39;est pas valide</label></div><div class="card-text"><label for="lastname-partner" class="form-label">Nom</label> <input id="lastname-partner" type="text" class="form-control" required> <label for="lastname-partner" class="invalid-feedback">Ce nom n&#39;est pas valide</label> <label for="lastname-partner" class="form-text">Nom d&#39;usage</label></div><div class="card-text"><label for="birthday-partner" class="form-label">Date de naissance</label> <input id="birthday-partner" type="date" class="form-control" required> <label for="birthday-partner" class="invalid-feedback">Cette date n&#39;est pas valide</label></div><div class="form-check"><input type="checkbox" class="form-check-input" id="teletransmission-partner" name="teletransmission-partner"> <label for="teletransmission-partner">Je souhaite activer la télétransmission NOEMIE</label></div></div></fieldset><input type="submit" class="btn btn-primary" value="Valider"></form></main><script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script><script src="/BIA-MH/js/index.js" async></script></body></html>
+<!doctype html>
+<html lang="fr">
+	<head>
+		<title>Bulletin Individuel d&#39;Affiliation</title>
+		<meta name="description" content="Bulletin à remplir pour finaliser votre affiliation">
+		<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bulletin Individuel d'Affiliation</title>
+<meta name="author" content="Cameo">
+<meta name="description" content="Bulletin à remplir pour finaliser votre affiliation">
+<meta property="og:title" content="Bulletin Individuel d'Affiliation">
+<meta property="og:type" content="website">
+<meta property="og:description" content="Bulletin à remplir pour finaliser votre affiliation">
+<meta property="og:url" content="http://localhost:8080/BIA-MH/">
+<meta property="og:image" content="http://localhost:8080/BIA-MH/img/banner.png">
+<meta property="og:image:alt" content="Bulletin individuel d'affiliation">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Bulletin Individuel d'Affiliation">
+<meta name="twitter:description" content="Bulletin à remplir pour finaliser votre affiliation">
+<meta name="twitter:image" content="http://localhost:8080/BIA-MH/img/banner.png">
+<meta name="twitter:image:alt" content="Bulletin individuel d'affiliation">
+<link rel="canonical" href="http://localhost:8080/BIA-MH/">
+		<meta property="og:locale" content="fr_FR">
+
+		<link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="/BIA-MH/css/style.css"/>
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg"/>
+	</head>
+	<body>
+		<nav class="navbar navbar-light bg-light">
+			<div class="container-fluid">
+				<a class="navbar-brand" href="#">
+					<img src="assets/logo_vivinter.jpg" alt="" height="30" class="d-inline-block align-text-top">
+				</a>
+			</div>
+		</nav>
+
+		<main class="container">
+			<h1 class="text-center my-3">Bulletin Individuel d&#39;Affiliation</h1>
+<form class="" action="/finish" method="GET">
+	
+		<fieldset id="informations-personnelles-fieldset" class="card mb-3 ">
+			<legend class="card-header pt-5">Informations personnelles</legend>
+			<div class="card-body px-0 mx-5 border-top pt-3">
+				
+				
+	
+		<div class="card-text">
+			<label for="socialsecurity" class="form-label required">Numéro de Sécurité Sociale</label>
+			<input
+				id="socialsecurity" 
+				type="text" 
+				class="form-control"
+				pattern="[1-2]\d{14}" 
+				value=""
+				placeholder=""
+				 required
+			/>
+			<label for="socialsecurity" class="invalid-feedback">Ce numéro n&#39;est pas valide</label>
+			
+		</div>
+	
+
+	
+		<div class="mb-3" id="civility">
+			<p class="form-label">Civilité</p>
+			
+				<input type="radio" class="btn-check" autocomplete="off" id="civility1" name="civility" checked>
+				<label class="btn btn-outline-primary" for="civility1">Monsieur</label>
+			
+				<input type="radio" class="btn-check" autocomplete="off" id="civility2" name="civility">
+				<label class="btn btn-outline-primary" for="civility2">Madame</label>
+			
+		</div>
+	
+
+	
+		<div class="card-text">
+			<label for="firstname" class="form-label required">Prénom</label>
+			<input
+				id="firstname" 
+				type="text" 
+				class="form-control"
+				pattern="" 
+				value="Jean-Baptiste"
+				placeholder=""
+				 required
+			/>
+			<label for="firstname" class="invalid-feedback">Ce prénom n&#39;est pas valide</label>
+			
+		</div>
+	
+
+	
+		<div class="card-text">
+			<label for="lastname" class="form-label required">Nom</label>
+			<input
+				id="lastname" 
+				type="text" 
+				class="form-control"
+				pattern="" 
+				value="Richardet"
+				placeholder=""
+				 required
+			/>
+			<label for="lastname" class="invalid-feedback">Ce nom n&#39;est pas valide</label>
+			
+		</div>
+	
+
+	
+		<div class="card-text">
+			<label for="birthday" class="form-label required">Date de naissance</label>
+			<input
+				id="birthday" 
+				type="date" 
+				class="form-control"
+				pattern="" 
+				value=""
+				placeholder=""
+				 required
+			/>
+			<label for="birthday" class="invalid-feedback">Cette date n&#39;est pas valide</label>
+			
+		</div>
+	
+
+	
+		<div class="card-text">
+			<label for="address" class="form-label required">Adresse postale</label>
+			<input
+				id="address" 
+				type="text" 
+				class="form-control"
+				pattern="" 
+				value=""
+				placeholder="1-11 rue Brillat-Savarin, 75013 Paris"
+				 required
+			/>
+			<label for="address" class="invalid-feedback"></label>
+			
+		</div>
+	
+
+	
+		<div class="card-text">
+			<label for="cellphone" class="form-label required">Téléphone mobile</label>
+			<input
+				id="cellphone" 
+				type="tel" 
+				class="form-control"
+				pattern="" 
+				value=""
+				placeholder=""
+				 required
+			/>
+			<label for="cellphone" class="invalid-feedback"></label>
+			
+		</div>
+	
+
+	
+		<div class="card-text">
+			<label for="email" class="form-label required">Adresse e-mail</label>
+			<input
+				id="email" 
+				type="email" 
+				class="form-control"
+				pattern="" 
+				value=""
+				placeholder="perso@protonmail.com"
+				 required
+			/>
+			<label for="email" class="invalid-feedback"></label>
+			
+		</div>
+	
+
+	
+		<div class="form-check">
+			<input type="checkbox" class="form-check-input" id="teletransmission" name="teletransmission">
+			<label for="teletransmission">Je souhaite activer la télétransmission NOEMIE</label>
+		</div>
+	
+
+
+			</div>
+		</fieldset>
+	
+		<fieldset id="teletransmission-fieldset" class="card mb-3 d-none">
+			<legend class="card-header pt-5">Télétransmission</legend>
+			<div class="card-body px-0 mx-5 border-top pt-3">
+				
+				
+	
+		<div class="mb-3" id="regime">
+			<p class="form-label"></p>
+			
+				<input type="radio" class="btn-check" autocomplete="off" id="regime1" name="regime" checked>
+				<label class="btn btn-outline-primary" for="regime1">Général</label>
+			
+				<input type="radio" class="btn-check" autocomplete="off" id="regime2" name="regime">
+				<label class="btn btn-outline-primary" for="regime2">Alsace/Moselle</label>
+			
+		</div>
+	
+
+	
+		<div class="card-text">
+			<label for="caisse" class="form-label">Organisme de rattachement</label>
+			<input
+				id="caisse" 
+				type="text" 
+				class="form-control"
+				pattern="" 
+				value=""
+				placeholder=""
+				
+			/>
+			<label for="caisse" class="invalid-feedback"></label>
+			
+		</div>
+	
+
+	
+		<div class="card-text">
+			<label for="code" class="form-label">Code de gestion</label>
+			<input
+				id="code" 
+				type="text" 
+				class="form-control"
+				pattern="" 
+				value=""
+				placeholder=""
+				
+			/>
+			<label for="code" class="invalid-feedback"></label>
+			
+		</div>
+	
+
+
+			</div>
+		</fieldset>
+	
+		<fieldset id="choix-de-garanties-fieldset" class="card mb-3 ">
+			<legend class="card-header pt-5">Choix de garanties</legend>
+			<div class="card-body px-0 mx-5 border-top pt-3">
+				
+				
+	
+		<ul class="nav nav-pills card-header-tabs card-text" role="tablist">
+			
+				<li class="nav-item" role="presentation">
+					<button id="base-tab" data-bs-toggle="pill" data-bs-target="#base" class="nav-link active" aria-selected=true type="button" role="tab" aria-controls="base">Base</button>
+				</li>
+			
+				<li class="nav-item" role="presentation">
+					<button id="surcomplementaire-tab" data-bs-toggle="pill" data-bs-target="#surcomplementaire" class="nav-link" aria-selected=false type="button" role="tab" aria-controls="surcomplementaire">Surcomplémentaire</button>
+				</li>
+			
+		</ul>
+		<div class="tab-content">
+			
+				<div class="tab-pane mt-4 active" id="base" role="tabpanel" aria-labelledby="base-tab">
+					<table class="table table-borderless">
+						<tbody>
+							
+								<tr>
+									<th scope="row">🤒 Consultation généraliste</th>
+									<td>300%, soit 75€</td>
+								</tr>
+							
+								<tr>
+									<th scope="row">😎 Verres simple et monture</th>
+									<td>300€, dont 100€ de monture</td>
+								</tr>
+							
+								<tr>
+									<th scope="row">😁 Prothèses dentaires et couronnes remboursées</th>
+									<td>320%</td>
+								</tr>
+							
+						</tbody>
+					</table>
+					<p class="text-success">Rien à rajouter, tout est déjà pris en charge !</p>
+					
+				</div>
+			
+				<div class="tab-pane mt-4" id="surcomplementaire" role="tabpanel" aria-labelledby="surcomplementaire-tab">
+					<table class="table table-borderless">
+						<tbody>
+							
+								<tr>
+									<th scope="row">🤒 Consultation généraliste</th>
+									<td>400%, soit 100€</td>
+								</tr>
+							
+								<tr>
+									<th scope="row">😎 Verres simple et monture</th>
+									<td>420€, dont 100€ de monture</td>
+								</tr>
+							
+								<tr>
+									<th scope="row">😁 Prothèses dentaires et couronnes remboursées</th>
+									<td>500%</td>
+								</tr>
+							
+						</tbody>
+					</table>
+					
+					<p class="text-warning">Je renforce mes garanties pour 25€ qui seront prélevés sur mon compte bancaire.</p>
+				</div>
+			
+		</div>
+	
+
+	
+		<div class="d-flex justify-content-center">
+			<button type="button" class="btn btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#details">Afficher toutes les garanties</button>
+		</div>
+		<div class="modal fade" id="details" tabindex="-1" aria-hidden="true">
+			<div class="modal-dialog modal-dialog-centered">
+				<div class="modal-content">
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fermer"></button>
+					<img src="/assets/garanties.png">
+				</div>
+			</div>
+		</div>
+	
+
+
+			</div>
+		</fieldset>
+	
+		<fieldset id="informations-conjoint-fieldset" class="card mb-3 ">
+			<legend class="card-header pt-5">Informations conjoint</legend>
+			<div class="card-body px-0 mx-5 border-top pt-3">
+				
+				
+	
+		<div class="card-text">
+			<label for="socialsecurity-partner" class="form-label required">Numéro de Sécurité Sociale</label>
+			<input
+				id="socialsecurity-partner" 
+				type="text" 
+				class="form-control"
+				pattern="[1-2]\d{14}" 
+				value=""
+				placeholder=""
+				 required
+			/>
+			<label for="socialsecurity-partner" class="invalid-feedback">Ce numéro n&#39;est pas valide</label>
+			
+		</div>
+	
+
+	
+		<div class="mb-3" id="civility">
+			<p class="form-label"></p>
+			
+				<input type="radio" class="btn-check" autocomplete="off" id="civility1" name="civility" checked>
+				<label class="btn btn-outline-primary" for="civility1">Monsieur</label>
+			
+				<input type="radio" class="btn-check" autocomplete="off" id="civility2" name="civility">
+				<label class="btn btn-outline-primary" for="civility2">Madame</label>
+			
+		</div>
+	
+
+	
+		<div class="card-text">
+			<label for="firstname" class="form-label required">Prénom</label>
+			<input
+				id="firstname" 
+				type="text" 
+				class="form-control"
+				pattern="" 
+				value=""
+				placeholder=""
+				 required
+			/>
+			<label for="firstname" class="invalid-feedback">Ce prénom n&#39;est pas valide</label>
+			
+		</div>
+	
+
+	
+		<div class="card-text">
+			<label for="lastname" class="form-label required">Nom</label>
+			<input
+				id="lastname" 
+				type="text" 
+				class="form-control"
+				pattern="" 
+				value=""
+				placeholder=""
+				 required
+			/>
+			<label for="lastname" class="invalid-feedback">Ce nom n&#39;est pas valide</label>
+			
+		</div>
+	
+
+	
+		<div class="card-text">
+			<label for="birthday" class="form-label required">Date de naissance</label>
+			<input
+				id="birthday" 
+				type="date" 
+				class="form-control"
+				pattern="" 
+				value=""
+				placeholder=""
+				 required
+			/>
+			<label for="birthday" class="invalid-feedback">Cette date n&#39;est pas valide</label>
+			
+		</div>
+	
+
+	
+		<div class="form-check">
+			<input type="checkbox" class="form-check-input" id="teletransmission" name="teletransmission">
+			<label for="teletransmission">Je souhaite activer la télétransmission NOEMIE</label>
+		</div>
+	
+
+
+			</div>
+		</fieldset>
+	
+	<input type="submit" class="btn btn-primary" value="Valider">
+</form>
+
+		</main>
+		<script src="/BIA-MH/js/bootstrap.min.js" async></script>
+		<script src="/BIA-MH/js/index.js" async></script>
+	</body>
+</html>
