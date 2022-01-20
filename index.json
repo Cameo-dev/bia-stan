@@ -1,0 +1,46 @@
+{
+	"path": [{
+		"id": "step-1",
+		"title": "Souhaitez-vous profiter de cette couverture ?",
+		"choices": [{
+			"text": "Je souhaite m'affilier",
+			"href": "/bia"
+		}, {
+			"text": "Je bénéficie d'une dispense",
+			"href": "#2"
+		}]
+	}, {
+		"id": "step-2",
+		"title": "Quel est votre motif de dispense ?",
+		"choices": [{
+			"text": "Je suis déjà couvert par un contrat",
+			"href": "#3"
+		}]
+	}, {
+		"id": "step-3",
+		"title": "Avez-vous votre justificatif ?",
+		"choices": [{
+			"text": "Oui, je peux le fournir immédiatement",
+			"href": "#4"
+		}, {
+			"text": "Non, je préfère les donner plus tard",
+			"href": "#5"
+		}]
+	}, {
+		"id": "step-4",
+		"title": "Merci de déposer votre justificatif",
+		"subtitle": " - une attestation de l'employeur de votre conjoint·e",
+		"type": "drop"
+	}, {
+		"id": "step-5",
+		"title": "Puis-je vous aider ?",
+		"subtitle": "Vous devez fournir ce justificatif sous 15 jours. Passer ce délai, vous serez affilié d'office.",
+		"choices": [{
+			"text": "Me le rappeler par e-mail",
+			"href": "#6"
+		}, {
+			"text": "Je demande à l'employeur de mon conjoint·e",
+			"href": "mailto:?subject=Justificatif de couverture santé&cc=jb@cameo.fr&body=Bonjour,%0D%0A%0D%0ADans le but de bénéficier d'une dispense de la couverture santé de mon employeur, pouvez-vous me transmettre le justificatif attestant de ma couverture par votre contrat santé ?%0D%0A%0D%0ACordialement"
+		}]
+	}]
+}

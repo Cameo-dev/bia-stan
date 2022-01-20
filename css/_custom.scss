@@ -10,7 +10,29 @@ body {
 	.step {
 		.card {
 			min-height: 10rem;
+
+			&:hover {
+				border: 1px solid $primary;
+			}
+
+			&.dropzone {
+				border: 1px dashed $secondary;
+
+				&.dragover {
+					border-color: $primary;
+					border-width: 3px;
+				}
+			}
 		}
+	}
+}
+
+input[type='file'] + label{
+	text-decoration: underline;
+	color: $primary;
+
+	&:hover {
+		cursor: pointer;
 	}
 }
 

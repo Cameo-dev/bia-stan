@@ -1,5 +1,6 @@
 $primary: #f07d00;
 $secondary: #747272;
+$light: #ffffff;
 
 $warning: $secondary;
 
@@ -19,3 +20,8 @@ $card-title-spacer-y: $card-spacer-y;
 // Forms
 $input-border-color: $primary;
 $form-check-input-border: 1px solid $primary;
+
+// Accordions
+$accordion-bg: transparent;
+$accordion-button-bg: transparent;
+$accordion-button-active-bg: transparent;
