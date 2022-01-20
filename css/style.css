@@ -14925,6 +14925,13 @@ body {
   background-color: rgba(116, 114, 114, 0.3);
 }
 
+.home-row {
+  height: calc(100vh - 57px);
+}
+.home-row .step .card {
+  min-height: 10rem;
+}
+
 .table {
   --bs-table-active-color: white;
   --bs-table-active-bg: $primary;
@@ -14935,6 +14942,17 @@ body {
 
 .card-text {
   margin: 1rem 0;
+}
+
+.card-header {
+  padding-top: 3rem;
+  font-weight: 400;
+}
+
+.card-body {
+  padding: 1rem 0 3rem;
+  margin: 0 3rem;
+  border-top: 1px solid #747272;
 }
 
 .form-label.required::after {
