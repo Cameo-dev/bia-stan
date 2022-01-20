@@ -1,5 +1,17 @@
+@use "sass:map";
+
 body {
 	background-color: rgba($secondary, 0.3);
+}
+
+.home-row {
+	height: calc(100vh - 57px);
+	
+	.step {
+		.card {
+			min-height: 10rem;
+		}
+	}
 }
 
 .table {
@@ -13,6 +25,17 @@ body {
 
 .card-text {
 	margin: 1rem 0;
+}
+
+.card-header {
+	padding-top: map.get($spacers, 5);
+	font-weight: $font-weight-normal;
+}
+
+.card-body {
+	padding: map.get($spacers, 3) map.get($spacers, 0) map.get($spacers, 5);
+	margin: map.get($spacers, 0) map.get($spacers, 5);
+	border-top: $border-width solid $secondary;
 }
 
 .form-label.required {

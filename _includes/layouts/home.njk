@@ -1,0 +1,37 @@
+---
+layout: layouts/base.njk
+---
+<div class="container-fluid home-row d-flex align-items-center">
+  <div class="row">
+    <div class="col-12 col-lg-6 d-flex align-items-center">
+      <img src="/assets/home.svg" class="img-fluid">
+    </div>
+    <div class="col-12 col-lg-6 d-flex align-items-center">
+      <div id="step-0" class="step">
+        <h1 class="text-center my-3 text-secondary py-4 fw-bold">{{ title }}</h1>
+        <p>Vous bénéficiez par votre employeur d'une couverture santé gérée par SCIACI SAINT-HONORE.</p>
+        <p>Pour vous affilier, rien de plus simple, il vous suffit de remplir les informations nécessaires sur ce site. Plus besoin de papier !</p>
+        <p>Vous aurez besoin de <strong>5 minutes maximum</strong> pour compléter ce formulaire.</p>
+        <button class='btn btn-primary' onclick="goToStep(1)">C'est parti !</button>
+      </div>
+      <div id="step-1" class="step row" hidden>
+        <h2>Souhaitez-vous profiter de cette couverture ?</h2>
+        <div class="col-10 col-lg-6">
+          <div class="card h-100 d-flex justify-content-center">
+            <a href="bia" class="btn">
+              <p class="card-text m-0">Je souhaite m'affilier</p>
+            </a>
+          </div>
+        </div>
+        <div class="col-10 col-lg-6">
+          <div class="card h-100 d-flex justify-content-center">
+            <a href="bia" class="btn">
+              <p class="card-text m-0">Je bénéficie d'une dispense</p>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<a href="https://www.freepik.com/vectors/education">Education vector created by stories - www.freepik.com</a>

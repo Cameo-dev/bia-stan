@@ -5,8 +5,8 @@ layout: layouts/base.njk
 <form class="" action="/finish" method="GET">
 	{% for set in fieldsets %}
 		<fieldset id="{{ set.legend | slug }}-fieldset" class="card mb-3 {{ set.classes if set.classes }}">
-			<legend class="card-header pt-5">{{ set.legend }}</legend>
-			<div class="card-body px-0 mx-5 border-top pt-3">
+			<legend class="card-header">{{ set.legend }}</legend>
+			<div class="card-body">
 				{% set inputs = set.inputs %}
 				{% include 'form.njk' %}
 			</div>

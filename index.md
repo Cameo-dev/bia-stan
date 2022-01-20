@@ -1,5 +1,5 @@
 ---
-layout: layouts/bia.njk
-title: Bulletin Individuel d'Affiliation
+layout: layouts/home.njk
+title: Bienvenu dans votre espace d'affiliation
 ---
 
