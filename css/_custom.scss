@@ -8,6 +8,10 @@ body {
 	height: calc(100vh - 57px);
 	
 	.step {
+		h2 {
+			min-height: 3em;
+		}
+
 		.card {
 			min-height: 10rem;
 

@@ -1,13 +1,12 @@
-const STEPS = new Map()
-STEPS.set(0, 'step-0');
-STEPS.set(1, 'step-1')
-STEPS.set(2, 'step-2')
-STEPS.set(3, 'step-3')
+window.addEventListener('hashchange', function() {
+	let hash = window.location.hash;
+	if(hash) goToStep(hash)
+}, false);
 
 function initPage() {
 	if(window.location.pathname === '/') {
 		let hash = window.location.hash;
-		if(STEPS.has(hash)) goToStep(STEPS.get(hash));
+		if(hash) goToStep(hash);
 
 		const dropzones = Array.from(document.getElementsByClassName('dropzone'));
 		dropzones.forEach(zone => {
@@ -17,9 +16,11 @@ function initPage() {
 			zone.ondragleave = dragLeaveHandler;
 		})
 		
-		document.getElementById('select-file').addEventListener( 'change', function( e ) {
-			const file = e.target.files[0];
-			addUploadedFile(file);
+		Array.from(document.getElementsByClassName('file-select')).forEach(fs => {
+			fs.addEventListener( 'change', function( e ) {
+				const file = e.target.files[0];
+				addUploadedFile(file);
+			});
 		});
 	} else if(window.location.pathname === '/bia') {
 		const tables = document.querySelectorAll('th');
@@ -82,22 +83,13 @@ if(document.readyState === 'loading') {
 // Buttons
 function goToStep(step) {
 	document.querySelector('.step:not([hidden])').setAttribute('hidden', '');
-	document.getElementById(`step-${step}`).removeAttribute('hidden');
+	document.getElementById(`step-${step.replace("#", "")}`).removeAttribute('hidden');
 }
 
 // File handling
-const uploadedFiles = [];
 function addUploadedFile(file) {
-	const files = document.getElementById('uploaded-files');
-	const newFile = document.getElementById('file').cloneNode(true).content;
-	const li = newFile.querySelector('li');
-	li.textContent = file.name;
-	files.append(newFile);
-
-	if(uploadedFiles.length === 0) {
-		document.getElementById('send').removeAttribute('disabled');
-	}
-	uploadedFiles.push(file);
+	const dropzone = document.querySelector('.step:not(hidden) .dropzone');
+	dropzone.textContent = file.name;
 }
 
 // Drop
