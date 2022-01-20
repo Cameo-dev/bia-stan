@@ -36,10 +36,10 @@
 		</nav>
 
 		<main class="container">
-			<div class="container-fluid home-row d-flex align-items-center">
-  <div class="row">
+			<div class="container-fluid home-row d-flex align-items-center justify-content-center">
+  <div class="row flex-grow-1">
     <div class="col-12 col-lg-6 d-flex align-items-center">
-      <img src="/assets/home.svg" class="img-fluid">
+      <img src="/assets/home-S2H.svg" class="img-fluid">
     </div>
     <div class="col-12 col-lg-6 d-flex align-items-center">
       <div id="step-0" class="step">
@@ -47,29 +47,139 @@
         <p>Vous bénéficiez par votre employeur d'une couverture santé gérée par SCIACI SAINT-HONORE.</p>
         <p>Pour vous affilier, rien de plus simple, il vous suffit de remplir les informations nécessaires sur ce site. Plus besoin de papier !</p>
         <p>Vous aurez besoin de <strong>5 minutes maximum</strong> pour compléter ce formulaire.</p>
-        <button class='btn btn-primary' onclick="goToStep(1)">C'est parti !</button>
+        <button class='btn btn-primary' onclick="goToStep('#1')" type="button">C'est parti !</button>
       </div>
-      <div id="step-1" class="step row" hidden>
-        <h2>Souhaitez-vous profiter de cette couverture ?</h2>
-        <div class="col-10 col-lg-6">
-          <div class="card h-100 d-flex justify-content-center">
-            <a href="bia" class="btn">
-              <p class="card-text m-0">Je souhaite m'affilier</p>
+      
+      <div id="step-1" class="step" hidden>
+        <h2 class="">Souhaitez-vous profiter de cette couverture ?</h2>
+        
+        
+        <div class="row row-cols-1 row-cols-lg-2">
+          
+          <div class="col">
+            <a href="/bia" class="btn d-block" onclick="goToStep('/bia')">
+              <div class="card justify-content-center">
+                <p class="card-text m-0">Je souhaite m&#39;affilier</p>
+              </div>
             </a>
           </div>
-        </div>
-        <div class="col-10 col-lg-6">
-          <div class="card h-100 d-flex justify-content-center">
-            <a href="bia" class="btn">
-              <p class="card-text m-0">Je bénéficie d'une dispense</p>
+          
+          <div class="col">
+            <a href="#2" class="btn d-block" onclick="goToStep('#2')">
+              <div class="card justify-content-center">
+                <p class="card-text m-0">Je bénéficie d&#39;une dispense</p>
+              </div>
             </a>
           </div>
+          
         </div>
+        
       </div>
+      
+      <div id="step-2" class="step" hidden>
+        <h2 class="">Quel est votre motif de dispense ?</h2>
+        
+        
+        <div class="row row-cols-1 row-cols-lg-2">
+          
+          <div class="col">
+            <a href="#3" class="btn d-block" onclick="goToStep('#3')">
+              <div class="card justify-content-center">
+                <p class="card-text m-0">Je suis déjà couvert par un contrat</p>
+              </div>
+            </a>
+          </div>
+          
+        </div>
+        
+      </div>
+      
+      <div id="step-3" class="step" hidden>
+        <h2 class="">Avez-vous votre justificatif ?</h2>
+        
+        
+        <div class="row row-cols-1 row-cols-lg-2">
+          
+          <div class="col">
+            <a href="#4" class="btn d-block" onclick="goToStep('#4')">
+              <div class="card justify-content-center">
+                <p class="card-text m-0">Oui, je peux le fournir immédiatement</p>
+              </div>
+            </a>
+          </div>
+          
+          <div class="col">
+            <a href="#5" class="btn d-block" onclick="goToStep('#5')">
+              <div class="card justify-content-center">
+                <p class="card-text m-0">Non, je préfère les donner plus tard</p>
+              </div>
+            </a>
+          </div>
+          
+        </div>
+        
+      </div>
+      
+      <div id="step-4" class="step" hidden>
+        <h2 class="">Merci de déposer votre justificatif</h2>
+        
+        <subtitle> - une attestation de l&#39;employeur de votre conjoint·e</subtitle>
+        
+        
+        <div class="row row-cols-1 my-5">
+          <div class="col">
+            <div class="card justify-content-center text-center dropzone">
+              Déposer votre fichier ici ou
+              <input id="step-4-upload" type="file" class="d-none file-select">
+              <label for="step-4-upload">choisissez-le</label>
+            </div>
+          </div>
+        </div>
+        <button type="buton" class="btn btn-primary">Envoyer</button>
+        
+      </div>
+      
+      <div id="step-5" class="step" hidden>
+        <h2 class="">Puis-je vous aider ?</h2>
+        
+        <subtitle>Vous devez fournir ce justificatif sous 15 jours. Passer ce délai, vous serez affilié d&#39;office.</subtitle>
+        
+        
+        <div class="row row-cols-1 row-cols-lg-2">
+          
+          <div class="col">
+            <a href="#6" class="btn d-block" onclick="goToStep('#6')">
+              <div class="card justify-content-center">
+                <p class="card-text m-0">Me le rappeler par e-mail</p>
+              </div>
+            </a>
+          </div>
+          
+          <div class="col">
+            <a href="mailto:?subject=Justificatif de couverture santé&amp;cc=jb@cameo.fr&amp;body=Bonjour,%0D%0A%0D%0ADans le but de bénéficier d&#39;une dispense de la couverture santé de mon employeur, pouvez-vous me transmettre le justificatif attestant de ma couverture par votre contrat santé ?%0D%0A%0D%0ACordialement" class="btn d-block" onclick="goToStep('mailto:?subject=Justificatif de couverture santé&amp;cc=jb@cameo.fr&amp;body=Bonjour,%0D%0A%0D%0ADans le but de bénéficier d&#39;une dispense de la couverture santé de mon employeur, pouvez-vous me transmettre le justificatif attestant de ma couverture par votre contrat santé ?%0D%0A%0D%0ACordialement')">
+              <div class="card justify-content-center">
+                <p class="card-text m-0">Je demande à l&#39;employeur de mon conjoint·e</p>
+              </div>
+            </a>
+          </div>
+          
+        </div>
+        
+      </div>
+      
     </div>
   </div>
 </div>
 <a href="https://www.freepik.com/vectors/education">Education vector created by stories - www.freepik.com</a>
+
+<!-- 
+- avez-vous ?
+ |_ Oui
+    |_ Dropzone
+ |_ Non
+    |_ Je m'engage à les remettre sous 15 jours. Lien dans le mail + relance
+    |_ Je demande à l'employeur
+    -->
 
 		</main>
 		<script src="/BIA-MH/js/bootstrap.min.js" async></script>
