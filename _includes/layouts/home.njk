@@ -36,7 +36,7 @@ layout: layouts/base.njk
           {% for choice in step.choices %}
           <div class="col">
             <a href="{{ choice.href }}" class="btn d-block" onclick="goToStep('{{ choice.href }}')">
-              <div class="card justify-content-center">
+              <div class="card justify-content-center p-2">
                 <p class="card-text m-0">{{ choice.text }}</p>
               </div>
             </a>
