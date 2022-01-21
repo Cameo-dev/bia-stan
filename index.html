@@ -1,22 +1,22 @@
 <!doctype html>
 <html lang="fr">
 	<head>
-		<title>Bienvenu dans votre espace d&#39;affiliation</title>
+		<title>Bienvenue dans votre espace d&#39;affiliation</title>
 		<meta name="description" content="Bulletin à remplir pour finaliser votre affiliation">
 		<meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Bienvenu dans votre espace d'affiliation</title>
+<title>Bienvenue dans votre espace d'affiliation</title>
 <meta name="author" content="Cameo">
 <meta name="description" content="Bulletin à remplir pour finaliser votre affiliation">
-<meta property="og:title" content="Bienvenu dans votre espace d'affiliation">
+<meta property="og:title" content="Bienvenue dans votre espace d'affiliation">
 <meta property="og:type" content="website">
 <meta property="og:description" content="Bulletin à remplir pour finaliser votre affiliation">
 <meta property="og:url" content="http://localhost:8080/BIA-MH/">
 <meta property="og:image" content="http://localhost:8080/BIA-MH/img/banner.png">
 <meta property="og:image:alt" content="Bulletin individuel d'affiliation">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Bienvenu dans votre espace d'affiliation">
+<meta name="twitter:title" content="Bienvenue dans votre espace d'affiliation">
 <meta name="twitter:description" content="Bulletin à remplir pour finaliser votre affiliation">
 <meta name="twitter:image" content="http://localhost:8080/BIA-MH/img/banner.png">
 <meta name="twitter:image:alt" content="Bulletin individuel d'affiliation">
@@ -43,8 +43,8 @@
     </div>
     <div class="col-12 col-lg-6 d-flex align-items-center">
       <div id="step-0" class="step">
-        <h1 class="text-center my-3 text-secondary py-4 fw-bold">Bienvenu dans votre espace d&#39;affiliation</h1>
-        <p>Vous bénéficiez par votre employeur d'une couverture santé gérée par SCIACI SAINT-HONORE.</p>
+        <h1 class="text-center my-3 text-secondary py-4 fw-bold">Bienvenue dans votre espace d&#39;affiliation</h1>
+        <p>Vous bénéficiez par votre employeur d'une couverture santé gérée par VIVINTER.</p>
         <p>Pour vous affilier, rien de plus simple, il vous suffit de remplir les informations nécessaires sur ce site. Plus besoin de papier !</p>
         <p>Vous aurez besoin de <strong>5 minutes maximum</strong> pour compléter ce formulaire.</p>
         <button class='btn btn-primary' onclick="goToStep('#1')" type="button">C'est parti !</button>
@@ -57,7 +57,7 @@
         <div class="row row-cols-1 row-cols-lg-2">
           
           <div class="col">
-            <a href="/bia" class="btn d-block" onclick="goToStep('/bia')">
+            <a href="/bia?${query}" class="btn d-block" onclick="goToStep('/bia?${query}')">
               <div class="card justify-content-center p-2">
                 <p class="card-text m-0">Je souhaite m&#39;affilier</p>
               </div>
@@ -86,6 +86,14 @@
             <a href="#3" class="btn d-block" onclick="goToStep('#3')">
               <div class="card justify-content-center p-2">
                 <p class="card-text m-0">Je suis déjà couvert par un contrat</p>
+              </div>
+            </a>
+          </div>
+          
+          <div class="col">
+            <a href="" class="btn d-block" onclick="goToStep('')">
+              <div class="card justify-content-center p-2">
+                <p class="card-text m-0">Je suis couvert à titre individuel</p>
               </div>
             </a>
           </div>
@@ -171,7 +179,11 @@
   </div>
 </div>
 <a href="https://www.freepik.com/vectors/education">Education vector created by stories - www.freepik.com</a>
-
+<template id="spinner">
+  <div class="spinner-border text-primary mx-auto" role="status">
+    <span class="visually-hidden">Loading...</span>
+  </div>
+</template>
 <!-- 
 - avez-vous ?
  |_ Oui
