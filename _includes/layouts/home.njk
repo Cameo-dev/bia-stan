@@ -4,12 +4,12 @@ layout: layouts/base.njk
 <div class="container-fluid home-row d-flex align-items-center justify-content-center">
   <div class="row flex-grow-1">
     <div class="col-12 col-lg-6 d-flex align-items-center">
-      <img src="{{ '/assets/home-S2H.svg' | url }}" class="img-fluid">
+      <img src="{{ metadata.homeImage | url }}" class="img-fluid">
     </div>
     <div class="col-12 col-lg-6 d-flex align-items-center">
       <div id="step-0" class="step">
         <h1 class="text-center my-3 text-secondary py-4 fw-bold">{{ title }}</h1>
-        <p>Vous bénéficiez par votre employeur d'une couverture santé gérée par SCIACI SAINT-HONORE.</p>
+        <p>Vous bénéficiez par votre employeur d'une couverture santé gérée par VIVINTER.</p>
         <p>Pour vous affilier, rien de plus simple, il vous suffit de remplir les informations nécessaires sur ce site. Plus besoin de papier !</p>
         <p>Vous aurez besoin de <strong>5 minutes maximum</strong> pour compléter ce formulaire.</p>
         <button class='btn btn-primary' onclick="goToStep('#1')" type="button">C'est parti !</button>
@@ -50,7 +50,11 @@ layout: layouts/base.njk
   </div>
 </div>
 <a href="https://www.freepik.com/vectors/education">Education vector created by stories - www.freepik.com</a>
-
+<template id="spinner">
+  <div class="spinner-border text-primary mx-auto" role="status">
+    <span class="visually-hidden">Loading...</span>
+  </div>
+</template>
 <!-- 
 - avez-vous ?
  |_ Oui

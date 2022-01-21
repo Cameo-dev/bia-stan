@@ -23,7 +23,7 @@ date: Last Modified
 		<nav class="navbar navbar-light bg-light">
 			<div class="container-fluid">
 				<a class="navbar-brand" href="/">
-					<img src="{{ '/assets/logo_vivinter.jpg' | url }}" alt="" height="30" class="d-inline-block align-text-top">
+					<img src="{{ metadata.logo | url }}" alt="" height="30" class="d-inline-block align-text-top">
 				</a>
 			</div>
 		</nav>
@@ -32,6 +32,6 @@ date: Last Modified
 			{{ content | safe }}
 		</main>
 		<script src="{{ '/js/bootstrap.min.js' | url }}" async></script>
-		<script src="{{ '/js/index.js' | url }}" async></script>
+		{% if script %}<script src="{{ script | url }}" async></script>{% endif %}
 	</body>
 </html>

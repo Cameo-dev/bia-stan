@@ -4,7 +4,7 @@
 		"title": "Souhaitez-vous profiter de cette couverture ?",
 		"choices": [{
 			"text": "Je souhaite m'affilier",
-			"href": "/bia"
+			"href": "/bia?${query}"
 		}, {
 			"text": "Je bénéficie d'une dispense",
 			"href": "#2"
@@ -15,6 +15,8 @@
 		"choices": [{
 			"text": "Je suis déjà couvert par un contrat",
 			"href": "#3"
+		}, {
+			"text": "Je suis couvert à titre individuel"
 		}]
 	}, {
 		"id": "step-3",

@@ -1,4 +1,6 @@
 {
-	"title": "Bulletin Individuel d'Affiliation - Malakoff Humanis",
-	"description": "Bulletin à remplir pour finaliser votre affiliation"
+	"title": "Bulletin Individuel d'Affiliation",
+	"description": "Bulletin à remplir pour finaliser votre affiliation",
+	"logo": "/assets/logo_vivinter.jpg",
+	"homeImage": "/assets/home-S2H.svg"
 }

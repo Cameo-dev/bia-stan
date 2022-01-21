@@ -17,14 +17,12 @@
 				"id": "firstname",
 				"label": "Prénom",
 				"type": "text",
-				"value": "Jean-Baptiste",
 				"errorMsg": "Ce prénom n'est pas valide",
 				"helpMsg": ""
 			}, {
 				"id": "lastname",
 				"label": "Nom",
 				"type": "text",
-				"value": "Richardet",
 				"errorMsg": "Ce nom n'est pas valide"
 			}, {
 				"id": "birthday",

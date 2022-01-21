@@ -1,5 +1,6 @@
 ---
 layout: layouts/home.njk
-title: Bienvenu dans votre espace d'affiliation
+title: Bienvenue dans votre espace d'affiliation
+script: /js/index.js
 ---
 
