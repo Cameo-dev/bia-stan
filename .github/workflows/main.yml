@@ -28,7 +28,7 @@ jobs:
       - name: Install dependencies & build
         run: |
           npm ci
-          DOMAIN=${{ secrets.DOMAIN }} PATH_PREFIX=BIA-MH npm run build
+          DOMAIN=${{ secrets.DOMAIN }} PATH_PREFIX=bia-stan npm run build
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
